@@ -8,9 +8,9 @@ const Layout = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { path: '/', icon: Target, label: 'Create Goal', emoji: '🎯' },
-    { path: '/dashboard', icon: Trophy, label: 'Dashboard', emoji: '🏆' },
-    { path: '/proof', icon: Upload, label: 'Submit Proof', emoji: '📸' },
+    { path: '/admin', icon: Target, label: 'Create Goal', emoji: '🎯' },
+    { path: '/admin/dashboard', icon: Trophy, label: 'Dashboard', emoji: '🏆' },
+    { path: '/admin/proof', icon: Upload, label: 'Submit Proof', emoji: '📸' },
   ];
 
   return (

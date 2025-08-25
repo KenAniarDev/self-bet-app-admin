@@ -17,19 +17,19 @@ const AdminLayout = () => {
 
   const navItems = [
     { 
-      path: '/dashboard', 
+      path: '/admin/dashboard', 
       icon: LayoutDashboard, 
       label: 'Dashboard',
       description: 'Overview and analytics'
     },
     { 
-      path: '/users', 
+      path: '/admin/users', 
       icon: Users, 
       label: 'Users',
       description: 'Manage registered users'
     },
     { 
-      path: '/goals', 
+      path: '/admin/goals', 
       icon: Target, 
       label: 'Goals',
       description: 'View all user goals'
