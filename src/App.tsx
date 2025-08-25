@@ -4,13 +4,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
+import AdminLayout from "./components/AdminLayout";
 import LoginPage from "./components/LoginPage";
-import SignupPage from "./components/SignupPage";
-import SettingsPage from "./components/SettingsPage";
-import GoalCreation from "./components/GoalCreation";
-import HabitDashboard from "./components/HabitDashboard";
-import ProofSubmission from "./components/ProofSubmission";
+import Dashboard from "./pages/Dashboard";
+import Users from "./pages/Users";
+import Goals from "./pages/Goals";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,12 +21,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/" element={<Layout />}>
-            <Route index element={<GoalCreation />} />
-            <Route path="dashboard" element={<HabitDashboard />} />
-            <Route path="proof" element={<ProofSubmission />} />
-            <Route path="settings" element={<SettingsPage />} />
+          <Route path="/" element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="users" element={<Users />} />
+            <Route path="goals" element={<Goals />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
